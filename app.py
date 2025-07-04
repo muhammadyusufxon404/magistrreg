@@ -11,6 +11,11 @@ ADMINS = [
     6855997739
 ]
 
+@app.route('/favicon.ico')
+def favicon():
+    # Hech narsa yubormaydi, lekin 200 OK javob beradi
+    return '', 204
+
 @app.route('/', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
